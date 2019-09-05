@@ -7,7 +7,7 @@ public class AlphaBeta {
 	
 	
 	private GomokuBoard board;
-	private static final int winScoreValue = 100000000;
+	private static final int winScoreValue = 1000;//100000000;
 	
 	  
 	public AlphaBeta(GomokuBoard board) {
@@ -356,16 +356,16 @@ public class AlphaBeta {
 			return winScoreValue;
 		}
 		case 4: {
-			if(currentTurn) return 1000000;//winGuarantee = 1000000;
+			if(currentTurn) return 100;//winGuarantee = 1000000;
 			else {
-				if(blocks == 0) return 250000;
-				else return 200;
+				if(blocks == 0) return 75;
+				else return 20;
 			}
 		}
 		case 3: {
 			if(blocks == 0) {
-				if(currentTurn) return 50000;
-				else return 200;
+				if(currentTurn) return 50;
+				else return 20;
 			}
 			else {
 				if(currentTurn) return 10;

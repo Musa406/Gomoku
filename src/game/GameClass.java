@@ -12,7 +12,7 @@ public class GameClass extends JFrame{
 	private GomokuBoard board;
 	private boolean isPlayersTurn = true;
 	private boolean gameFinished = false;
-	private int minimaxDepth = 3;
+	private int minimaxTreeDepth = 3;
 	private AlphaBeta computer;
 	private int winner; 
 	
@@ -89,7 +89,7 @@ public class GameClass extends JFrame{
 			}
 			
 			
-			int[] computerMove = computer.calculateNextMove(minimaxDepth);
+			int[] computerMove = computer.calculateNextMove(minimaxTreeDepth);
 			
 			if(computerMove == null) {
 				System.out.println("No possible moves left. Game Over.");
